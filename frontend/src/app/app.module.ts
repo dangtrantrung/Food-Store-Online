@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http'
 import { AppComponent } from './app.component'
 import { HeaderComponent } from './components/partials/header/header.component'
 import { AppRoutingModule } from './app-routing.module'
+import { FoodService } from './services/food.service'
+import { HomeComponent } from './components/pages/home/home.component'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent,HomeComponent],
   imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
-  providers: [],
+  providers: [FoodService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
