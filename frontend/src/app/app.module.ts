@@ -9,9 +9,16 @@ import { AppRoutingModule } from './app-routing.module'
 import { FoodService } from './services/food.service'
 import { HomeComponent } from './components/pages/home/home.component'
 import { SearchComponent } from './components/partials/search/search.component'
+import { FoodPageComponent } from './components/pages/food-page/food-page.component'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    SearchComponent,
+    FoodPageComponent,
+  ],
   imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
   providers: [FoodService],
   bootstrap: [AppComponent],
