@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'food/:id',
     component: FoodPageComponent,
   },
+  {
+    path: 'tag/:tag',
+    component: HomeComponent,
+  },
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
