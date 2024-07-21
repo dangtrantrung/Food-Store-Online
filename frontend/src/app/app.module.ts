@@ -13,6 +13,7 @@ import { FoodPageComponent } from './components/pages/food-page/food-page.compon
 import { TagsComponent } from './components/partials/tags/tags.component'
 import { CartService } from './services/cart.service'
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component'
+import { TitleComponent } from './components/partials/title/title.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
     FoodPageComponent,
     TagsComponent,
     CartPageComponent,
+    TitleComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
   providers: [FoodService, CartService],
