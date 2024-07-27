@@ -21,8 +21,14 @@ export class HomeComponent implements OnInit {
         foodsObservable = this.foodService.getAllFoodBySearchTerm(
           params.searchTerm,
         )
+        foodsObservable.subscribe((serverFoods) => {
+          this.foods = serverFoods
+        })
       } else if (params.tag) {
         foodsObservable = this.foodService.getAllFoodsByTag(params.tag)
+        foodsObservable.subscribe((serverFoods) => {
+          this.foods = serverFoods
+        })
       } else {
         // console.log('get all', foodService.getAll())
 
