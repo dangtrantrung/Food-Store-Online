@@ -37,7 +37,7 @@ app.get('/api/foods/:foodId', (req, res) => {
   //   res.send('Hello world!')
   const foodId = req.params.foodId
   const food =
-    sample_foods.find((food) => food.id == foodId) ?? 'Not found Food ID'
+    sample_foods.find((food) => food.id == foodId) ?? 'Food ID Not found '
   res.send(food)
 })
 
