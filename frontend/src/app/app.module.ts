@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { AppComponent } from './app.component'
 import { HeaderComponent } from './components/partials/header/header.component'
@@ -14,6 +14,7 @@ import { CartService } from './services/cart.service'
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component'
 import { TitleComponent } from './components/partials/title/title.component'
 import { NotFoundComponent } from './components/partials/not-found/not-found.component'
+import { LoginPageComponent } from './components/pages/login-page/login-page.component'
 
 @NgModule({
   declarations: [
@@ -26,8 +27,15 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
     CartPageComponent,
     TitleComponent,
     NotFoundComponent,
+    LoginPageComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+  ],
   providers: [FoodService, CartService],
   bootstrap: [AppComponent],
 })
