@@ -17,7 +17,7 @@ export class LoginPageComponent implements OnInit {
         '',
         [
           Validators.required,
-          Validators.pattern('^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$'),
+          // Validators.pattern('^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$'),
         ],
       ],
       password: ['', Validators.required],
