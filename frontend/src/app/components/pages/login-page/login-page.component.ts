@@ -9,16 +9,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup
   isSubmitted = false
+  emailRegex = '/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/'
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: [
         '',
-        [
+        Validators.compose([
           Validators.required,
-          // Validators.pattern('^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$'),
-        ],
+          Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/),
+        ]),
       ],
       password: ['', Validators.required],
     })
