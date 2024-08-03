@@ -15,7 +15,9 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import { TitleComponent } from './components/partials/title/title.component'
 import { NotFoundComponent } from './components/partials/not-found/not-found.component'
 import { LoginPageComponent } from './components/pages/login-page/login-page.component'
-
+import { ToastrModule } from 'ngx-toastr'
+import { UserService } from './services/user.service'
+// import{Browseranimationmodule} from '@angular/platform-browser/a'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +37,13 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
     HttpModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      newestOnTop: false,
+    }),
   ],
-  providers: [FoodService, CartService],
+  providers: [FoodService, CartService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
