@@ -12,7 +12,7 @@ export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup
   isSubmitted = false
   returnUrl = ''
-  emailRegex = '/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/'
+  // emailRegex = '/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/'
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
@@ -22,13 +22,15 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: [
-        '',
-        Validators.compose([
-          Validators.required,
-          Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/),
-        ]),
-      ],
+      // email: [
+      //   '',
+      //   Validators.compose([
+      //     Validators.required,
+      //     Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/),
+      //   ]),
+      // ],
+      email: ['', Validators.required],
+
       password: ['', Validators.required],
     })
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl

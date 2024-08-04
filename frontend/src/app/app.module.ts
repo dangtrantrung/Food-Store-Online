@@ -17,6 +17,9 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
 import { LoginPageComponent } from './components/pages/login-page/login-page.component'
 import { ToastrModule } from 'ngx-toastr'
 import { UserService } from './services/user.service'
+import { InputContainerComponent } from './components/partials/input-container/input-container.component'
+import { InputValidationComponent } from './components/partials/input-validation/input-validation.component'
+import { TextInputComponent } from './components/partials/text-input/text-input.component'
 // import{Browseranimationmodule} from '@angular/platform-browser/a'
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { UserService } from './services/user.service'
     TitleComponent,
     NotFoundComponent,
     LoginPageComponent,
+    InputContainerComponent,
+    InputValidationComponent,
+    TextInputComponent,
   ],
   imports: [
     BrowserModule,
