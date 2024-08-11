@@ -4,6 +4,10 @@ import { sample_foods, sample_tags, sample_users } from './data'
 
 import foodRouter from './routers/food.router'
 import userRouter from './routers/user.router'
+import dotenv from 'dotenv'
+dotenv.config()
+import { dbConnect } from './config/database.config'
+dbConnect()
 
 const app = express()
 app.use(express.json())
@@ -15,7 +19,6 @@ app.use(
 )
 app.use('/api/foods', foodRouter)
 app.use('/api/users', userRouter)
-
 
 const port = 5001
 app.listen(port, () => {
