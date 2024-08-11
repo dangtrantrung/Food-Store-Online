@@ -4,7 +4,7 @@ export const dbConnect = () => {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   } as ConnectOptions).then(
-    () => console.log('connect database Mongo DB Atlas successfully'),
+    () => console.log('connect database MongoDB Atlas successfully'),
     (error) => console.log(error),
   )
 }
