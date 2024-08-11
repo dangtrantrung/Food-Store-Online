@@ -5,8 +5,8 @@
 }
 
 button {
-    height: 3.5rem;
-    border: none;
+    color: whitesmoke;
+    background-color: red;
     outline: none;
     font-weight: 100;
     border-radius: 0.8rem;
