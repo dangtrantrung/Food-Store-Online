@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5001'
+const BASE_URL = 'http://localhost:5002'
 
 export const FOODS_URL = BASE_URL + '/api/foods'
 export const FOODS_TAGS_URL = FOODS_URL + '/tags'
